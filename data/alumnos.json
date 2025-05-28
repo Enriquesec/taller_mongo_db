@@ -1,0 +1,9 @@
+[
+  { nombre: "Brayan", edad: 19, carrera: "Desarrollo de Software", deporte: "ciclismo", inscrito: true },
+  { nombre: "Manuel", edad: 18, carrera: "Desarrollo de Software", deporte: "power lifting", inscrito: true },
+  { nombre: "Maria", edad: 20, carrera: "Matematicas", inscrito: false, promedio: 85 },
+  { _id: 'ABC123', nombre: "Juan", edad: 23, carrera: "Turismo", matricula: 'ABC123', inscrito: true, promedio: 90 },
+  { nombre: "Jhonatan", edad: 18, carrera: "Desarrollo de Software", deporte: "ninguno", inscrito: false },
+  { _id: "DEF456", nombre: "Jessica", edad: 20, carrera: "Turismo", inscrito: true, promedio: 88 },
+  { nombre: "Joaquine", edad: 14, carrera: "Secundaria", inscrito: true }
+]
