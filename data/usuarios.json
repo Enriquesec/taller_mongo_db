@@ -1,0 +1,6 @@
+[
+  { _id: 1, nombre: "Carlos", carrera: "Sociología", intereses: ["cine", "fútbol"], activo: true },
+  { _id: 2, nombre: "Ana", carrera: "Informática", intereses: ["programación", "café"], activo: true },
+  { _id: 3, nombre: "Luis", carrera: "Informática", intereses: ["anime"], activo: false },
+  { _id: 4, nombre: "Lucía", carrera: "Psicología", intereses: ["lectura", "arte"], activo: true }
+]
