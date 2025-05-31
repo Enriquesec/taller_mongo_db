@@ -34,13 +34,13 @@ print("\n--- [INFO] Usuarios activos (match + project) ---");
 db.usuarios.aggregate([
   { $match: { activo: true } },
   { $project: { nombre: 1, intereses: 1, _id: 0 } }
-]).forEach(printjson);
+])
 
 print("\n--- [INFO] Número de estudiantes por carrera (group) ---");
 // 3. $group: Agrupa documentos y permite hacer cálculos como conteo, promedio, suma.
 db.usuarios.aggregate([
   { $group: { _id: "$carrera", total: { $sum: 1 } } }
-]).forEach(printjson);
+])
 
 print("\n--- [INFO] Top 2 carreras con más estudiantes (group + sort + limit) ---");
 // 4. $sort: Ordena los documentos (1 ascendente, -1 descendente).
@@ -49,7 +49,7 @@ db.usuarios.aggregate([
   { $group: { _id: "$carrera", total: { $sum: 1 } } },
   { $sort: { total: -1 } },
   { $limit: 2 }
-]).forEach(printjson);
+])
 
 // --------------------------------------------------------------------------------------
 // Relaciones entre colecciones con $lookup
@@ -68,7 +68,7 @@ db.usuarios.aggregate([
     }
   },
   { $project: { nombre: 1, posts: 1 } }
-]).forEach(printjson);
+])
 
 // --------------------------------------------------------------------------------------
 // Agrupaciones más complejas y operaciones con campos embebidos
@@ -84,7 +84,7 @@ db.publicaciones.aggregate([
       promedioMeGusta: { $avg: "$reacciones.me_gusta" }
     }
   }
-]).forEach(printjson);
+])
 
 print("\n--- [INFO] Total de reacciones por usuario (me_gusta + me_encanta) ---");
 db.publicaciones.aggregate([
@@ -95,7 +95,7 @@ db.publicaciones.aggregate([
       totalMeEncanta: { $sum: "$reacciones.me_encanta" }
     }
   }
-]).forEach(printjson);
+])
 
 // --------------------------------------------------------------------------------------
 // Uso de $unwind para operar sobre arreglos
@@ -107,7 +107,7 @@ db.usuarios.aggregate([
   { $unwind: "$intereses" },
   { $group: { _id: "$intereses", cantidad: { $sum: 1 } } },
   { $sort: { cantidad: -1 } }
-]).forEach(printjson);
+])
 
 // --------------------------------------------------------------------------------------
 // Reto: Combinación de etapas para análisis más avanzado
@@ -129,7 +129,7 @@ db.publicaciones.aggregate([
       totalMeEncanta: { $gte: 2 }
     }
   }
-]).forEach(printjson);
+])
 
 // --------------------------------------------------------------------------------------
 // Fin de la Clase 3
