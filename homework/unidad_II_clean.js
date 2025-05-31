@@ -5,6 +5,7 @@
 // 1. Crear base de datos y colección con validación de esquema
 // ----------------------------------------------------------------------------------
 
+
 // La db se deberá llamar tienda_general
 use tienda_general;
 
