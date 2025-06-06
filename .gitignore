@@ -1,0 +1,8 @@
+# Entornos virtuales
+nosql/
+taller/
+.nosql/
+.taller/
+
+.ipynb_checkpoints/
+__pycache__/

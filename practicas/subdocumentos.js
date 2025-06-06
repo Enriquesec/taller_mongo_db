@@ -25,9 +25,8 @@ db.libros.insertOne({
 });
 
 // 3. Buscar todos los libros con un comentario hecho por "Ana"
-print("\nLibros con comentarios de Ana:");
 printjson(
-  db.libros.find({ "comentarios.usuario": "Ana" }).toArray()
+  db.libros.find({ "comentarios.usuario": "Ana" })
 );
 
 // 4. Agregar un nuevo comentario al libro
@@ -67,7 +66,3 @@ print("\nDocumento actualizado:");
 printjson(
   db.libros.findOne({ titulo: "Cien años de soledad" })
 );
-
-// 8. Reto extra (para alumnos): Agregar calificaciones y calcular promedio
-// Sugerencia: actualizar comentarios para que incluyan campo "calificacion"
-// Y usar agregaciones con $unwind y $avg para obtener promedio de calificaciones
