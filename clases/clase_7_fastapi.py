@@ -27,7 +27,7 @@ class Artistas(BaseModel):
 # CONEXIÓN A MONGODB
 # --------------------------
 # Cadena de conexión a la base de datos
-url_db = "mongodb+srv://enriquesec2:1234@tallerremedial.q5s2lio.mongodb.net/?retryWrites=true&w=majority&appName=TallerRemedial"
+url_db = "mongodb+srv://usuario:contrasena@tallerremedial.q5s2lio.mongodb.net/?retryWrites=true&w=majority&appName=TallerRemedial"
 
 # Cliente MongoDB
 client = MongoClient(url_db)
